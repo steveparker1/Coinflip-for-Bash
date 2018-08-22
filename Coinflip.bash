@@ -19,7 +19,7 @@ fi
 if [ $computer_choice -eq 1 ] && [ $user_choice = h ]; then
 # Correct
 echo "You win!"
-elif [ $computer_choice -eq 1 ] && [ $user_choice = t     | ]; then
+elif [ $computer_choice -eq 1 ] && [ $user_choice = t ]; then
 # Incorrect
 echo "You lose!"
 exit
