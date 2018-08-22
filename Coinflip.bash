@@ -2,7 +2,6 @@
 #CoinFlip 1.0
 #Lucino Kumaru 8/21/2018
 scorefile="CFscorefile_bash"
-guess=$user_choice
 printf "Choose (h)eads or (t)ails: "
 read user_choice
 # Make sure user chooses between heads or tails
