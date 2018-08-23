@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#CoinFlip 1.0
+#CoinFlip 1.5
 #Lucino Kumaru 8/21/2018
 scorefile="CFscorefile_bash"
 printf "Choose (h)eads or (t)ails: "
@@ -19,16 +19,20 @@ fi
 if [ $computer_choice -eq 1 ] && [ $user_choice = h ]; then
 # Correct
 echo "You win!"
+notify-send "your getting Clairvoyant :)"
 elif [ $computer_choice -eq 1 ] && [ $user_choice = t ]; then
 # Incorrect
 echo "You lose!"
+notify-send "Concentrate Harder! :("
 exit
 elif [ $computer_choice -eq 2 ] && [ $user_choice = t ]; then
 # Correct
 echo "You win!"
+notify-send "your getting Clairvoyant :)"
 else
 # Incorrect
 echo "You lose!"
+notify-send "Concentrate Harder! :("
 exit
 fi
 # Save High Score
