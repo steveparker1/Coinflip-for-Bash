@@ -15,3 +15,7 @@ LK27 8/21/18
 For Coinflip 1.0 please select coinflip1x0.bash from the coinflip 1.0 release the other options link to coinflip 1.5 sorry for the inconvience as I get to learn Github.
 
 LK27 8/22/18
+
+Desktop Notifactions depend on the libnotify package 
+
+LK27 8/23/18
