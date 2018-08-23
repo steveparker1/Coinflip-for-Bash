@@ -10,4 +10,8 @@ That being said you the user of this script accepts 100% Ownership of every copy
 I offer no warenties or support if you change something and it breaks the script nor under any circumstance.
 I give 100% premission to sell this script as free software as in the terms of the GPL 3.0
 
-LK27
+LK27 8/21/18
+
+For Coinflip 1.0 please select coinflip1x0.bash from the coinflip 1.0 release the other options link to coinflip 1.5 sorry for the inconvience as I get to learn Github.
+
+LK27 8/22/18
