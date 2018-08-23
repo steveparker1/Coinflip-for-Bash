@@ -17,20 +17,20 @@ else
 echo "Computer chose tails."
 fi
 if [ $computer_choice -eq 1 ] && [ $user_choice = h ]; then
-# Correct
+# Correct & Desktop Notifaction
 echo "You win!"
 notify-send "your getting Clairvoyant :)"
 elif [ $computer_choice -eq 1 ] && [ $user_choice = t ]; then
-# Incorrect
+# Incorrect & Desktop Notifaction
 echo "You lose!"
 notify-send "Concentrate Harder! :("
 exit
 elif [ $computer_choice -eq 2 ] && [ $user_choice = t ]; then
-# Correct
+# Correct & Desktop Notifaction
 echo "You win!"
 notify-send "your getting Clairvoyant :)"
 else
-# Incorrect
+# Incorrect & Desktop Notifaction
 echo "You lose!"
 notify-send "Concentrate Harder! :("
 exit
