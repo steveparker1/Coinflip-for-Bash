@@ -19,3 +19,7 @@ LK27 8/22/18
 Desktop Notifactions depend on the libnotify package 
 
 LK27 8/23/18
+
+Added ASCII art! See what you type!
+
+Lk27 8/24/18
