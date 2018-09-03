@@ -1,6 +1,27 @@
 #!/usr/bin/bash
 #CoinFlip 2.0
 #Lucino Kumaru 8/21/2018 shinjox27@gmail.com
+
+win()
+{
+  cat ASCII/CF_correct.txt
+  echo "You win!"
+  notify-send "your getting Clairvoyant :)"
+  # Save High Score & ASCII
+  cat ASCII/CF_scorefile.txt
+  read -p "Please enter your name: " name
+  echo $name $user_choice >> $scorefile
+  # print High Score
+  echo -e "\nPrevious high scores,"
+  cat $scorefile
+}
+lose()
+{
+  cat ASCII/CF_incorrect.txt
+  echo "You lose!"
+  notify-send "Concentrate Harder! :("
+}
+
 scorefile="CFscorefile_bash"
 cat ASCII/CF_opening.txt
 printf "Choose (h)eads or (t)ails: "
@@ -19,33 +40,7 @@ else
 notify-send "Tails!"
 echo "Computer chose tails."
 fi
-if [ $computer_choice -eq 1 ] && [ $user_choice = h ]; then
-# Correct & Desktop Notifaction & ASCII
-cat ASCII/CF_correct.txt
-echo "You win!"
-notify-send "your getting Clairvoyant :)"
-elif [ $computer_choice -eq 1 ] && [ $user_choice = t ]; then
-# Incorrect & Desktop Notifaction & ASCII
-cat ASCII/CF_incorrect.txt
-echo "You lose!"
-notify-send "Concentrate Harder! :("
-exit
-elif [ $computer_choice -eq 2 ] && [ $user_choice = t ]; then
-# Correct & Desktop Notifaction & ASCII
-cat ASCII/CF_correct.txt
-echo "You win!"
-notify-send "your getting Clairvoyant :)"
-else
-# Incorrect & Desktop Notifaction & ASCII
-cat ASCII/CF_incorrect.txt
-echo "You lose!"
-notify-send "Concentrate Harder! :("
-exit
-fi
-# Save High Score & ASCII
-cat ASCII/CF_scorefile.txt
-read -p "Please enter your name: " name
-echo $name $user_choice >> $scorefile
-# print High Score
-echo -e "\nPrevious high scores,"
-cat $scorefile
+case "${computer_choice}${user_choice}" in
+  2t|1h) win ;;
+  *) lose ;;
+esac
